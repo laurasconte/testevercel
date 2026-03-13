@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MultimídiaLab — Blog Acadêmico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur2"></div>
+<div id="prog"></div>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="index.html">MULTIMÍDIA<em>LAB</em></a>
+  <ul class="nav-links">
+    <li><a href="#posts">Postagens</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="search-box">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5a6a7e" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="searchInput" placeholder="Buscar postagens..."/>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-g1"></div>
+  <div class="hero-g2"></div>
+  <div class="hero-left">
+    <div class="hero-badge">Disciplina de Multimídias · 2025</div>
+    <h1 class="hero-h1">
+      MULTIMÍDIA<br>
+      <span class="c1">LAB</span><br>
+      <span class="c2">Blog Acadêmico</span>
+    </h1>
+    <p class="hero-p">Explorando o universo das mídias digitais — de imagens e áudio à realidade virtual, IA e além. Projeto acadêmico com 17 postagens.</p>
+    <div class="hero-btns">
+      <a href="#posts" class="btn-c">Ver Postagens</a>
+      <a href="#sobre" class="btn-o">Sobre Nós</a>
+    </div>
+    <div class="hero-stats">
+      <div><span class="snum">17</span><span class="slbl">Postagens</span></div>
+      <div><span class="snum">10</span><span class="slbl">Categorias</span></div>
+      <div><span class="snum">2</span><span class="slbl">Autores</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-mosaic">
+      <div class="mosaic-item m1" data-label="Realidade Virtual">🥽</div>
+      <div class="mosaic-item m2" data-label="Imagem Digital">🖼</div>
+      <div class="mosaic-item m3" data-label="Inteligência Artificial">🤖</div>
+      <div class="mosaic-item m4" data-label="Game Design">🎮</div>
+    </div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>MULTIMÍDIA</span><span>HIPERMÍDIA</span><span>REALIDADE VIRTUAL</span><span>REALIDADE AUMENTADA</span><span>HOLOGRAFIA</span><span>INTELIGÊNCIA ARTIFICIAL</span><span>GAME DESIGN</span><span>IOT</span><span>AUTOMAÇÃO</span><span>IMAGEM DIGITAL</span>
+    <span>MULTIMÍDIA</span><span>HIPERMÍDIA</span><span>REALIDADE VIRTUAL</span><span>REALIDADE AUMENTADA</span><span>HOLOGRAFIA</span><span>INTELIGÊNCIA ARTIFICIAL</span><span>GAME DESIGN</span><span>IOT</span><span>AUTOMAÇÃO</span><span>IMAGEM DIGITAL</span>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrap" id="posts">
+  <div class="posts-section">
+    <div class="sec-hdr">
+      <h2 class="sec-title">TODAS AS <em>POSTAGENS</em></h2>
+      <span class="sec-sub" id="filterLabel">17 postagens</span>
+    </div>
+    <div class="cat-pills">
+      <button class="pill on" onclick="filter('all',this)">Todas</button>
+      <button class="pill" onclick="filter('apresentacao',this)">👤 Apresentação</button>
+      <button class="pill" onclick="filter('midia',this)">📺 Mídia</button>
+      <button class="pill" onclick="filter('xr',this)">🥽 XR & Holo</button>
+      <button class="pill" onclick="filter('imagem',this)">🖼 Imagem</button>
+      <button class="pill" onclick="filter('ia',this)">🤖 IA</button>
+      <button class="pill" onclick="filter('game',this)">🎮 Games</button>
+      <button class="pill" onclick="filter('tech',this)">⚙️ Tecnologia</button>
+    </div>
+    <div class="posts-list" id="postsList"></div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="widget">
+      <h3 class="w-title">MAIS <em>RECENTES</em></h3>
+      <div id="sidebarPosts"></div>
+    </div>
+    <div class="widget">
+      <h3 class="w-title">REQUISITOS <em>DO BLOG</em></h3>
+      <div class="req-grid">
+        <div class="req-item"><span class="req-num">2+</span><span class="req-lbl">Vídeos externos</span></div>
+        <div class="req-item"><span class="req-num">1</span><span class="req-lbl">Vídeo criado</span></div>
+        <div class="req-item"><span class="req-num">2+</span><span class="req-lbl">Áudios externos</span></div>
+        <div class="req-item"><span class="req-num">1</span><span class="req-lbl">Áudio criado</span></div>
+        <div class="req-item"><span class="req-num">2+</span><span class="req-lbl">Imagens</span></div>
+        <div class="req-item"><span class="req-num">∞</span><span class="req-lbl">Referências</span></div>
+      </div>
+    </div>
+    <div class="widget">
+      <h3 class="w-title">TAGS <em>POPULARES</em></h3>
+      <div class="tags-wrap">
+        <span class="wtag">Multimídia</span><span class="wtag">VR</span><span class="wtag">AR</span>
+        <span class="wtag">Holografia</span><span class="wtag">IA</span><span class="wtag">Game Design</span>
+        <span class="wtag">IoT</span><span class="wtag">Automação</span><span class="wtag">Imagem</span>
+        <span class="wtag">Hipermídia</span><span class="wtag">Python</span><span class="wtag">Unity</span>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- ABOUT -->
+<div class="about-sec" id="sobre">
+  <div>
+    <h2 class="about-h">QUEM <em>SOMOS</em></h2>
+    <!-- ✏️ EDITE: Coloque informações reais dos autores -->
+    <p class="about-p">Somos estudantes da disciplina de Multimídias e criamos este blog como projeto acadêmico para explorar e compartilhar conhecimento sobre as principais tecnologias do universo das mídias digitais.</p>
+    <p class="about-p">Cada postagem foi elaborada com conteúdo educacional, exemplos práticos, vídeos, áudios e referências.</p>
+  </div>
+  <div>
+    <div class="students">
+      <!-- ✏️ EDITE: Nomes e descrições dos autores -->
+      <div class="student-card">
+        <div class="student-avatar">👤</div>
+        <div class="student-name">Aluno 1</div>
+        <div class="student-role">Autor · Multimídias</div>
+      </div>
+      <div class="student-card">
+        <div class="student-avatar">👤</div>
+        <div class="student-name">Aluno 2</div>
+        <div class="student-role">Autor · Multimídias</div>
+      </div>
+      <div class="student-card" style="grid-column:1/-1">
+        <div class="student-avatar">🏫</div>
+        <div class="student-name">Disciplina de Multimídias</div>
+        <div class="student-role">Projeto Acadêmico · 2025</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">MULTIMÍDIA<em>LAB</em></a>
+      <p>Blog acadêmico da disciplina de Multimídias. Explorando imagem, vídeo, áudio, VR, IA, games e muito mais.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Categorias</h5>
+      <ul>
+        <li><a href="#">👤 Apresentação</a></li>
+        <li><a href="#">📺 Multimídia & Hipermídia</a></li>
+        <li><a href="#">🥽 Realidade Virtual / AR</a></li>
+        <li><a href="#">🔮 Holografia</a></li>
+        <li><a href="#">🖼 Imagem Digital</a></li>
+        <li><a href="#">🤖 Inteligência Artificial</a></li>
+        <li><a href="#">🎮 Game Design</a></li>
+        <li><a href="#">⚙️ IoT & Automação</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Postagens</h5>
+      <ul id="footerPosts"></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 MultimídiaLab — Projeto Acadêmico</span>
+    <span>Disciplina de Multimídias</span>
+  </div>
+</footer>
+
+<script src="js/posts.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
